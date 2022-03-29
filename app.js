@@ -1,3 +1,8 @@
+function scorem(){
+    scoreh = 0
+    scorec = 0
+    score = 0
+}
 function hname() {
     var name = prompt("What's your name?")
     alert(`Hello ${name}!`)
@@ -9,16 +14,15 @@ function number(){
     return random
 }
 
-function humanguess(){
-    do{        
-        score = score + random     
-        alert(`Your card was ${random}. Total ${score} `)
-        if (score > 20){
-            alert("Im sorry...you went over 20.")
-            cpscore++
-            break
-        }
+function humanguess(random){
+    do{
+        totalh = totalh + random
+        var pickh = (`The number you drew was ${random}. Your total is${totalh} Would you like to pick again "y" for yes. "n" for no.`)
+        
+    }while(again == "Y") 
+    return humanguess
 }
 
 hname()
-number()
+
+humanguess()
